@@ -1,4 +1,5 @@
 Full Report for Code Review 
+
 https://github.com/Bowenislandsong/SoftwareDesigns/blob/master/Assigment2/Report.pdf
 1. Documentation:
 - The Read me file presents a clear view of the API. The test examples is clear. so is the function explanation. 
