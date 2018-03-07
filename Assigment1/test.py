@@ -9,7 +9,7 @@ import glob
 # resizeable video, allow passing size and time
 # allow users to scan all the friends
 
-Imager.twitter_api('consumer_token',"consumer_secret","key","secret")
+twmager.twitter_api('consumer_token',"consumer_secret","key","secret")
 
 twmager.download_tw_img("etcwilde")
 # 

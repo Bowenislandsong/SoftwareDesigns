@@ -2,9 +2,9 @@ import tweepy
 import requests
 import os
 
-def download_tw_img(Username):
+def download_tw_img(Username,numofimgs=999):
     #api = twitter_api()
-    timeline = api.user_timeline(screen_name = Username,count=999, include_rts = True)
+    timeline = api.user_timeline(screen_name = Username,count=numofimgs, include_rts = True)
     urls = []
     for tweet in timeline:
         for media in tweet.entities.get("media",[{}]):
