@@ -8,10 +8,9 @@ import glob
 # Have google vision scan all the pictures for those contents
 # resizeable video, allow passing size and time
 # allow users to scan all the friends
-
 twmager.twitter_api('consumer_token',"consumer_secret","key","secret")
 
-twmager.download_tw_img("etcwilde")
+twmager.download_tw_img("TwitterUser")
 # 
 
 # img2video.rmAllType()

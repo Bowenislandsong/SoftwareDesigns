@@ -18,3 +18,9 @@ The project includes:
  - img2video.py (Converts images to video)
  - twmager.py (Communicates with Twitter and grabs information from Twitter)
  - vision.py (Communicates with Google vision and put tags on to images)
+
+# Getting Started
+- Open an Twitter developer account
+- Try out test.py and input Twitter secretes
+- Get Google Developer secrete jason file for Google Vision
+- Put secrete jason file on the working directory.
