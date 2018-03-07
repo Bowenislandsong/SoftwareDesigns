@@ -2,8 +2,8 @@
 The API allows users to grab images from specified Twitter account and make them into a short video with related information tags.
 
 Third party dependencies:
-- [tweepy]{https://github.com/tweepy/tweepy}
-- [PIL]{http://www.pythonware.com/products/pil/}
+- [tweepy](https://github.com/tweepy/tweepy)
+- [PIL](http://www.pythonware.com/products/pil/)
 
 # API Feature:
 - allow user to choose what video content is
