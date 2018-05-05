@@ -13,10 +13,10 @@ The actual system architecture on the final presentation slide is very hard to r
 
 Content wise, the system architecture failed to deliver the relation between components. There are only double headed arrows everywhere without any explanation. 
 ## Data flow
-
+The data flow of the application is hidden in the System Architecture diagram. Application front-end draws user information from registration, and sending it to server to stare in MongoDB. Every requests from either patients or the care givers are going through the same process to log or retrieve data from MongoDB. The scheduled message notification is sent from server when scanning though MongoDB. All of requests and messages are handled by Twilio.
 
 ## Error handling 
-There are json parsing to detect error messages. For GPS [location error](https://github.com/scbhatia/Alzheimers-Application/blob/master/Backend/AlzCare/server.js#L278)the request return is parsed to capture error message. However, these messages are shown instead of been taking cared of. There is no further action other than the message showing "something went wrong". The same type of error handling are placed for all other handled error places such as database fetch error, message sending error, etc. 
+There are json parsing to detect error messages. For GPS [location error](https://github.com/scbhatia/Alzheimers-Application/blob/master/Backend/AlzCare/server.js#L278) the request return is parsed to capture error message. However, error messages are shown instead of been taking cared of. There is no further action other than the message showing "something went wrong". The same type of error handling are placed for all other handled error places such as database fetching errors, message sending errors, and etc. 
 
 There are some Unit test available which also derived some good results. This is very good for app development. I do suggest using AWS auto application testing for more rigorous unit tests. 
 
