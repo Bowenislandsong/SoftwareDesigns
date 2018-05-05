@@ -1,4 +1,5 @@
 # Peer Review Assignment (From Distributed Computing) 
+by Bowen Song and Anish Gupta
  This is a peer review assignment for the Alzheimers-Application
  (https://github.com/scbhatia/Alzheimers-Application)
 ## User Story Review
