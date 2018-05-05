@@ -1,0 +1,6 @@
+# folder format files
+*Icon?
+*.DS_Store
+
+# secrets
+*.json
