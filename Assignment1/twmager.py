@@ -13,7 +13,7 @@ def download_tw_img(Username,numofimgs=999):
                 urls.append(media["media_url"])
             # checks if the entity is of the type "photo"
     #             urls.add(requests.get(media["media_url"]))
-    index = 1;
+    index = 1
     for url in urls:
         request = requests.get(url, stream=True)
         if request.status_code == 200:

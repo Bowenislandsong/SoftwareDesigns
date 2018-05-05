@@ -21,12 +21,18 @@ def jpg2mp4():
 	p.stdin.close()
 	p.wait()
 
-# def rmAllType():
-# 	os.remove(os.path.join(os.path.dirname(__file__),
-#     '*.jpg'))
+def rmAllType():
+	os.remove(os.path.join(os.path.dirname(__file__),
+    '*.jpg'))
+
+def rmPWDImg():
+	filelist = glob.glob(os.path.join(os.getcwd(), '*.jpg'))
+	for f in filelist:
+		os.remove(f)
 
 def labelonImage(text,filename):
 	img = Image.open(filename)
+	img = img.convert('RGB') # handel grey scale image error
 	draw = ImageDraw.Draw(img)
 	# font = ImageFont.truetype(<font-file>, <font-size>)
 	width, height = img.size
@@ -34,7 +40,10 @@ def labelonImage(text,filename):
 	#print (int(width*0.003* height*0.007))
 	# draw.text((x, y),"Sample Text",(r,g,b))
 	#print "expect string here and we got: "+str(text)
-	draw.text((width*0.3, height*0.7),' '.join(text),(0,0,0),font = fnt)
+	## print test
+	# print(text[:5])
+	# print('\n')
+	draw.text((width*0.3, height*0.7),' '.join(text[:5]),(0,0,0),font = fnt)
 	img.save(filename)
 
 
