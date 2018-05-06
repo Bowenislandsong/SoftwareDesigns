@@ -1,5 +1,5 @@
 ## Phase 1
-python, mogodb, tweepy are installed in a docker invironemnet. (This should not be different from local installed environment setup)
+python, mogodb, tweepy and other dependencies are installed in a docker environment. (This should not be different from local installed environment setup)
 
 The python program import the airport location data and has the following functions available
  - Read data
