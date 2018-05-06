@@ -8,7 +8,7 @@ import json
 import mogoLog as lg
 import trend
 import glob
-
+import trend
 
 
 
