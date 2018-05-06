@@ -43,8 +43,9 @@ def labelonImage(text,filename):
 	## print test
 	# print(text[:5])
 	# print('\n')
-	draw.text((width*0.3, height*0.7),' '.join(text[:5]),(0,0,0),font = fnt)
+	draw.text((width*0.3, height*0.7),' '.join(text),(0,0,0),font = fnt)
 	img.save(filename)
+	return text
 
 
 

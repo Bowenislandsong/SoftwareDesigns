@@ -15,7 +15,7 @@ def getCollection(client,db,collection):
 
 def read(collection,item_index,query={}):
 	result = serach(collection,query)[item_index]
-	print result
+	print(result)
 	return result
 
 def update(collection,item_collection,item_index,update_items):
