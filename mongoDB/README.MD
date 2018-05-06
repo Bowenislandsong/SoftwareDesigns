@@ -16,3 +16,4 @@ Integrating with tweeter project to analysis user tweets
 
 ## Phase 3
  - provide daily stats about overall trending topics and usage
+ - outputs word maps from user and their closest Google trend comparison
