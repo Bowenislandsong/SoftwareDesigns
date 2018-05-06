@@ -6,7 +6,7 @@ import img2video
 import vision
 import json
 import mogoLog as lg
-
+import trend
 import glob
 
 
@@ -34,9 +34,12 @@ for infile in glob.glob("*.jpg"):
 		for t in text:
 			lg.loginterests(t)
 
-lg.savetop(5)
+lg.savetop(10)
 
 top5 = lg.uploadlog()
+
+for term in top5.keys():
+	trend.tredreport(term)
 
 img2video.jpg2mp4()
 

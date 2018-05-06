@@ -50,8 +50,8 @@ def savetop(num):
     try:
         if (len(keylst) > num):
             for key in keylst:
-                print(key)
-                print( vallist[0])
+                # print(key)
+                # print( vallist[0])
                 if (my_descriptors.get(key) <= vallist[0]):
                     my_descriptors.pop(key, None)
                     savetop(num)
