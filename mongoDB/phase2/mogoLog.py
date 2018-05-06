@@ -30,7 +30,9 @@ def uploadlog():
     my_descriptors = json.loads(my_descriptors)
     print(type(my_descriptors))
     collection.insert_one(my_descriptors)
+    tempdesc = my_descriptors
     my_descriptors = {}
+    return tempdesc
 
 def loginterests(descriptor):
     global my_descriptors
@@ -42,19 +44,21 @@ def loginterests(descriptor):
 
 def savetop(num):
     global my_descriptors
-    keylst = my_descriptors.keys
-    if (len(keylst) > num):
-        
-    else:
-        return my_descriptors
-        pass
-    for 
+    keylst = my_descriptors.keys()
     vallist = my_descriptors.values()
     vallist.sort()
-    for val in vallist:
-        print("%s: %s" % (key, my_descriptors[key]))
-    print("top 5")
-    print(my_descriptors[:,num])
+    try:
+        if (len(keylst) > num):
+            for key in keylst:
+                print(key)
+                print( vallist[0])
+                if (my_descriptors.get(key) <= vallist[0]):
+                    my_descriptors.pop(key, None)
+                    savetop(num)
+    except:
+        print(len(keylst))
+        print("Unexpected error:", sys.exc_info()[0])
+        raise
 
 
 # if __name__ == "__main__":

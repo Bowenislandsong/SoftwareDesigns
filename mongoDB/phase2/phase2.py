@@ -34,10 +34,9 @@ for infile in glob.glob("*.jpg"):
 		for t in text:
 			lg.loginterests(t)
 
-lg.checktop(5)
+lg.savetop(5)
 
-lg.uploadlog()
-
+top5 = lg.uploadlog()
 
 img2video.jpg2mp4()
 
