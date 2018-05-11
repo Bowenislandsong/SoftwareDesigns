@@ -93,6 +93,23 @@ The Main components and their building blocks including:
    \item ffmpeg - ffmpeg Tools for audio extraction, sub-clip extraction, merger video and audio, form video by frame, and resizing a video
    \item decorators - apply functions to mask and video
 \end{itemize}
+\section{Error Handling}
+The Moviepy usually handle errors with if statment by rasing exceptions. This is the best way to handle errors. Using try and catch is the first stage of handling errors. After some time, a mature way of handling errors should be deterministic as most of the Moviepy error handling technique. The expcetion is usually raised with specific error message suggesting users a readable error message. An example is attached in the fllowing:
+\begin{lstlisting}
+        if change_end:
+            self.end = None if (t is None) else (self.start + t)
+        else:
+            if self.duration is None:
+                raise Exception("Cannot change clip start when new"
+                                "duration is None")
+            self.start = self.end - t
+\end{lstlisting}
+
+Other error handling technique such as return success are used to make error handling a deterministic process with readable error messages. 
+The current implementation, however, is lack of version control over its dependencies. The major dependency error comes from ffmpeg and Imageio where the versions mismatch error is not handled. Since it is a open source project, the open source community has developed several version and deleted some of the beginner friendly part. The Moviepy no longer supports dependency auto-installation and with it the dependency version control problem shows. A leading error from this problem is the video reading error which could come from unsupported or deprecated ffmpeg version.\\
+
+There are still a lot of room for improvement on the error handling matter. Some error are not generated because the process is considered successful but the output is not. For example, videos generated becomes unreadable and broken, checked all available decoding method, while there is no error message from the API. 
+
 \section{Architecture}
 The movie editing test came out with interaction with API components as shown in Figure \ref{figure:graph}.
 
