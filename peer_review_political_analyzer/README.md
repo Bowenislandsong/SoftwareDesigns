@@ -10,10 +10,10 @@ The user story of the projects are divided into 2 categories: as a software deve
 - User: The story for the user side is concise and intriguing. Allowing users to know what they are actually reading and giving them a prior belief about the content would keep readers shield up or become skeptical when reading a very biased content. 
 
 ## System Architecture Review
-![system architecture][SystemDiagramPA.png]
+![system architecture](SystemDiagramPA.png)
 The architecture is very clear and well planed. However, the machine learning model could use some work. The current model is the multinomial Naive Bayes classifier which is considered a baseline model disregarding order of words. More investigation can be done using Regression models which could provide more accurate result. This problem is a contributing factor to the issue discussed later in Analyzer result error handling. 
 ## Data flow
-![Data Flow][DataFlowPA.png]
+![Data Flow](DataFlowPA.png)
 The Data flows very smoothly as described above. This information would help future development if presents on the project Github.
 ## Error handling 
 There are several cases where errors are not handled result in fail to retrieve web page analysis. 
